@@ -1,5 +1,4 @@
 h1 {
-    text-align: center;
     color: white;
 }
 
@@ -10,12 +9,12 @@ h1 {
 #section0 .app_neme h1 {
     font-size: 8rem;
     margin: 0;
-    line-height: 128px;
+    line-height: 200px;
 }
 
 #section0 .app_neme img {
-    width: 128px;
-    height: 128px;
+    width: 200px;
+    height: 200px;
 }
 
 
@@ -47,44 +46,53 @@ h1 {
     background-size: cover;
 }
 
+:root {
+    --ellipse: 6.25rem;
+}
+
 #section2 h1 {
-    font-size: 4em;
-    margin-bottom: 1rem;
-}
-
-#section2 .mx-auto {
-    list-style: none;
-    display: flex;
-    padding: 0;
-
-}
-
-#section2 .mx-auto li {
-    color: white;
-    padding: 0;
-    height: 200px;
-    transition: width 300ms ease;
-    background-image: url(../icons/3.webp);
-}
-
-
-
-#section2 .mx-auto li p {
-    opacity: 0;
+    font-size: 4rem;
+    color: #333;
+    width: 40rem;
     position: relative;
-    top: 15px;
-    left: 130px;
-    width: 220px;
-    height: 100%;
-    transition: top 0.5s ease;
-    margin: 0;
-    padding: 0;
 }
 
 
-#section2 .mx-auto li.active p {
-    opacity: 1;
-    top: -10px;
+#section2 h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background-image: linear-gradient(to left, #1a2a6c, #b21f1f, #fdbb2d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* 因为background-clip是预览阶段的css属性，要加上一个前缀版本 */
+    clip-path: ellipse(var(--ellipse) var(--ellipse) at 0% 50%);
+    animation: move 5s infinite;
+}
+
+@keyframes move {
+
+    0%,
+    100% {
+        clip-path: ellipse(var(--ellipse) var(--ellipse) at 0% 50%);
+    }
+
+    50% {
+        clip-path: ellipse(var(--ellipse) var(--ellipse) at 100% 50%);
+    }
+}
+
+#section2 .button button {
+    color: white;
+    font-size: 3em;
+    background: none;
+    border: none;
+    border-bottom: white 2px solid;
+}
+#section2 .button button:hover {
+    border-bottom: #0dcaf0 2px solid;
 }
 
 #section3 {
@@ -129,24 +137,6 @@ h1 {
 
     }
 
-    #section2 .mx-auto {
-        display: block;
-    }
-
-    #section2 .mx-auto li {
-        width: 100%;
-        height: 110px;
-    }
-
-    #section2 .mx-auto li.active {
-        width: 100%;
-        
-    }
-
-    #section2 .mx-auto li p {
-        width: 100%;
-        position: static;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -171,26 +161,14 @@ h1 {
         max-width: 600px;
     }
 
-    #section2 .mx-auto li {
-        width: 100px;
-    }
 
-    #section2 .mx-auto li.active {
-        width: 350px;
-    }
 }
 
 
 @media screen and (min-width:1000px) {
 
     /* 大于 */
-    #section2 .mx-auto li {
-        width: 150px;
-    }
 
-    #section2 .mx-auto li.active {
-        width: 380px;
-    }
 
 }
 
@@ -206,14 +184,6 @@ h1 {
 @media screen and (min-width:1235px) {
 
     /* 大于 */
-    #section2 .mx-auto li {
-        width: 220px;
-    }
-
-    #section2 .mx-auto li.active {
-        width: 350px;
-    }
-
 }
 
 @media screen and (min-width:1921px) {

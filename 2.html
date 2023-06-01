@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+</head>
+<style>
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        display: none;
+    }
+
+    #introBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="overlay">
+        <div id="introBox">
+            <h2>欢迎!</h2>
+            <p>这是一个引导动画的示例。</p>
+            <button id="closeBtn">关闭</button>
+        </div>
+    </div>
+
+    <script>$(document).ready(function () {
+            // 显示蒙层和介绍框
+            function showIntro() {
+                $("#overlay").fadeIn();
+                $("#introBox").fadeIn();
+            }
+
+            // 关闭蒙层和介绍框
+            function closeIntro() {
+                $("#overlay").fadeOut();
+                $("#introBox").fadeOut();
+            }
+
+            // 绑定按钮的点击事件
+            $("#closeBtn").click(closeIntro);
+
+            // 在页面加载完毕后显示引导动画
+            showIntro();
+        });
+    </script>
+</body>
+
+</html>
