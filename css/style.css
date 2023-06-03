@@ -91,6 +91,7 @@ h1 {
     border: none;
     border-bottom: white 2px solid;
 }
+
 #section2 .button button:hover {
     border-bottom: #0dcaf0 2px solid;
 }
@@ -149,6 +150,7 @@ h1 {
     #section2 h1 {
         font-size: 3em;
         margin-bottom: 1rem;
+        width: 30em;
     }
 
 
