@@ -44,6 +44,8 @@ h1 {
     background-image: url(../icons/s.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 :root {
@@ -85,6 +87,7 @@ h1 {
 }
 
 #section2 .button button {
+    width: 22rem;
     color: white;
     font-size: 3em;
     background: none;

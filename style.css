@@ -1,29 +1,21 @@
 
 *{
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    margin: 0;
 }
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #161623;
-}
-
-.container{
+.Demo-container {
+    max-width: 780px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
     flex-wrap: wrap;
     z-index: 1;
+    min-height: 100vh;
+    background: #333;
 }
-.container .card{
+
+.Demo-container .card {
     position: relative;
     width: 280px;
     height: 400px;
@@ -40,18 +32,21 @@ body{
     backdrop-filter: blur(5px);
 
 }
-.container .card .content{
+
+.Demo-container .card .content {
     padding: 20px;
     text-align: center;
     transform: translateY(100px);
     opacity: 0;
     transition: 0.5s;
 }
-.container .card:hover .content{
+
+.Demo-container .card:hover .content {
     transform: translateY(0px);
     opacity: 1;
 }
-.container .card .content h2{
+
+.Demo-container .card .content h2 {
     position: absolute;
     top: -60px;
     right: 1px;
@@ -59,17 +54,21 @@ body{
     color: rgba(255, 255, 255, 0.05);
     pointer-events: none;
 }
-.container .card .content h3{
+
+.Demo-container .card .content h3 {
     font-size: 1.8em;
     color: #fff;
     z-index: 1;
 }
-.container .card .content p{
+
+.Demo-container .card .content p {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
+    margin: 0;
 }
-.container .card .content a{
+
+.Demo-container .card .content a {
     position: relative;
     display: inline-block;
     padding: 8px 20px;
