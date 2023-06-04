@@ -69,7 +69,7 @@ h1 {
     background-image: linear-gradient(to left, #1a2a6c, #b21f1f, #fdbb2d);
     background-clip: text;
     -webkit-background-clip: text;
-    /* 因为background-clip是预览阶段的css属性，要加上一个前缀版本 */
+
     clip-path: ellipse(var(--ellipse) var(--ellipse) at 0% 50%);
     animation: move 5s infinite;
 }
@@ -153,7 +153,7 @@ h1 {
     #section2 h1 {
         font-size: 3em;
         margin-bottom: 1rem;
-        width: 30em;
+        width: 30rem;
     }
 
 
