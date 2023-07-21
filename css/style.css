@@ -19,20 +19,14 @@ h1 {
 
 
 #section0 {
-    background-image: linear-gradient(128deg, #cff4fc, #0d6efd);
+    background-image: linear-gradient(180deg, #00BCD4, #f5cfff);
 }
 
 #section1 {
-    background-image: url(../icons/tl.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(180deg, #f5cfff,#00BCD4)
 }
 
-#section1 img {
-    left: 100%;
-    position: relative;
-    transition: all 600ms ease;
-}
+
 
 #section1 .image-container {
     display: flex;
@@ -41,9 +35,7 @@ h1 {
 }
 
 #section2 {
-    background-image: url(../icons/s.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(180deg, #00BCD4, #8fffc7);
     display: flex;
     justify-content: center;
 }
@@ -58,7 +50,6 @@ h1 {
     width: 40rem;
     position: relative;
 }
-
 
 #section2 h1::after {
     content: attr(data-text);
@@ -100,20 +91,22 @@ h1 {
 }
 
 #section3 {
-    background-image: linear-gradient(128deg, #8fffc7, #0dcaf0);
+    background-image: linear-gradient(180deg, #8fffc7, #0dcaf0);
 }
 
-#section3 h1 {
+
+#section4 {
+    background-image: linear-gradient(180deg,#0dcaf0,#03A9F4);
+}
+#section4 h1 {
     font-size: 8rem;
 }
 
-#section3 h2 {
+#section4 h2 {
     color: white;
     text-align: center;
     font-size: 4rem;
-
 }
-
 
 @media screen and (max-width: 800px) {
 
@@ -132,11 +125,11 @@ h1 {
         height: 96px;
     }
 
-    #section3 h1 {
+    #section4 h1 {
         font-size: 4rem;
     }
 
-    #section3 h2 {
+    #section4 h2 {
         font-size: 3rem;
 
     }
