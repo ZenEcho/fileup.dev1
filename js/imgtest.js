@@ -2,7 +2,7 @@ var data = [
     {
         link: "https://mjj.today/",
         image: "https://i.mji.rip/2023/07/24/677f7b899b30449cd21adcde2718f079.jpeg",
-        introduce: ""
+        introduce: "更适合 mjj 体质的斯巴达图床"
     },
     {
         link: "https://pnglog.com/",
