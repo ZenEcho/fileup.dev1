@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图床大比拼</title>
     <script src="js/jquery-3.6.3.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
 </head>
 <style>
     #box {
@@ -49,6 +48,7 @@
 
         </h2>
     </header>
+    <script src="js/imgtest.js"></script>
     <script>
         // 使用Fisher-Yates算法对数组进行洗牌
         function shuffleArray(array) {
@@ -57,54 +57,6 @@
                 [array[i], array[j]] = [array[j], array[i]];
             }
         }
-
-        const data = [
-            {
-                link: "https://mjj.today/",
-                image: "https://i2.mij.rip/2023/07/24/677f7b899b30449cd21adcde2718f079.jpeg"
-            },
-            {
-                link: "https://pnglog.com/",
-                image: "https://cdn-us.imgs.moe/2023/07/24/64bdda1c68a54.jpg"
-            },
-            {
-                link: "https://www.uhsea.com/",
-                image: "https://file.uhsea.com/2307/377fac4913b24a5ac16a49aa597aa59471.jpg"
-            },
-            {
-                link: "https://cap2box.com/",
-                image: "https://s1.imgcap.xyz/2161107b57bc3a77227b33152deffaa7.jpeg"
-            },
-            {
-                link: "https://imgfg.com/",
-                image: "https://imgfg.com/i/IGxAZfAyYz.jpg"
-            },
-            {
-                link: "https://img.xwyue.com/",
-                image: "https://img.xwyue.com/i/2023/07/24/64bddc4b439d6.jpg"
-            },
-            {
-                link: "https://img.duan.ee/",
-                image: "https://img.duan.ee/i/2023/07/24/64bdde3dbde56.jpg"
-            },
-            {
-                link: "https://pic.apic.cc/",
-                image: "https://pic.apic.cc/cloud/2023/07/24/64bdde7c011b9.jpg"
-            },
-            {
-                link: "https://img.ink/",
-                image: "https://pic.ziyuan.wang/2023/07/24/6c888cb738645.jpg"
-            },
-            {
-                link: "https://png.cm/",
-                image: "https://i2.100024.xyz/2023/07/24/jzb1p4.webp"
-            },
-            {
-                link: "https://www.imgtbl.com/",
-                image: "https://www.imgtbl.com/i/2023/07/24/64be0e945d719.jpg",
-                introduce:"IMGTable 云端相册"
-            }
-        ];
         data.forEach(item => {
             item.image += `?cache=${Date.now()}`;
         });
@@ -126,9 +78,10 @@
                 // 添加图片元素，并设置onload事件处理函数
                 $box.append(`
             <div class="box">
-                <h2 ><a href="${item.link}" target="_blank">图床：${item.link}</a></h2>
-                <p style=" font-size: 0.7em;">${item.image}</p>
+                <h3>图床：<a href="${item.link}" target="_blank">${item.link}</a></h3>
+                <p style=" font-size: 0.7em;">介绍：${item.introduce}</p>
                 <img src="${item.image}">
+                <p style=" font-size: 0.7em;">${item.image}</p>
             </div>
         `);
 
@@ -138,7 +91,7 @@
                     const loadTime = endTime - startTime;
                     $(this).parent().append(`
                     <p style=" font-size: 1em; ">加载时间：${loadTime}毫秒</p>
-                    <p style=" font-size: 0.7em; ">(js计算的理论时间,会受网络,计算机性能,本地时间,浏览器等不确定因素影响)</p>`);
+                    <p style=" font-size: 0.7em; ">(时间计算会受网络,计算机性能,本地时间,浏览器等不确定因素影响)</p>`);
                 });
 
 
