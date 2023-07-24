@@ -6,9 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mjj图床大比拼</title>
 </head>
+<style>
+    #box {
+        
+        column-count: 3;
+        /* Adjust the column count as needed */
+        column-gap: 20px;
+        /* Adjust the gap between columns as needed */
+    }
+
+    .box {
+        break-inside: avoid;
+        box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
+        /* Prevent boxes from breaking across columns */
+        margin-bottom: 20px;
+        padding: 10px;
+        /* Adjust the margin between boxes as needed */
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</style>
 
 <body>
+    <header>
+        <h1><a href="https://hostloc.com/thread-1190659-1-1.html">[图床评比]mjj图床大比拼，mjj来比一下吧</a></h1>
+        <p>禁止国内/国外访问的，上传需要登录的，上传小于5.33MB的都不在内</p>
+        <p>人工可能会有遗漏，不在上述范围的mjj可以联系</p><a href="https://hostloc.com/thread-1190659-1-1.htm">hostloc</a>或者<a
+            href="https://github.com/ZenEcho/fileup.dev">github</a>
 
+        <h2>顺序不做排名，测试时请关闭代理，f12打开测试面板，并禁止缓存</h2>
+        <img src="https://i.mji.rip/2023/07/24/d844fc857a6c106e857b118424a6441e.png">
+        <p>原图名称：8K赛博朋克落日旅馆，大小：5.33 MB</p>
+        <p>原图地址：https://images5.alphacoders.com/129/1298529.jpg</p>
+        </h2>
+    </header>
+    <div id="box">
+
+    </div>
     <script>
         // Function to shuffle the array randomly
         function shuffleArray(array) {
@@ -68,19 +106,8 @@
         // Function to generate the HTML
         function generateHTML() {
             let html = `
-            <h1><a href="https://hostloc.com/thread-1190659-1-1.html">[图床评比]mjj图床大比拼，mjj来比一下吧</a></h1>
-            <p>禁止国内/国外访问的，上传需要登录的，上传小于5.33MB的都不在内</p>
-    <p>人工可能会有遗漏，不在上述范围的mjj可以联系</p><a href="https://hostloc.com/thread-1190659-1-1.htm">hostloc</a>或者<a href="https://github.com/ZenEcho/fileup.dev">github</a>
-
-    <h2>顺序不做排名，测试时请关闭代理，f12打开测试面板，并禁止缓存</h2>
-    <img src="https://i.mji.rip/2023/07/24/d844fc857a6c106e857b118424a6441e.png">
-    <p>原图名称：8K赛博朋克落日旅馆，大小：5.33 MB</p>
-    <p>原图地址：https://images5.alphacoders.com/129/1298529.jpg</p>
-</h2>
-    
-    
-                <div>
-                    <h2><a href="${data[0].link}" target="_blank">【${data[0].link}】</a></h2>
+                <div class="box">
+                    <h2><a href="${data[0].link}" target="_blank">${data[0].link}</a></h2>
                     <img src="${data[0].image}" width="500px">
                 </div>
             `;
@@ -88,18 +115,19 @@
             for (let i = 1; i < data.length; i++) {
                 html += `
                 
-                    <div>
-                        <h2><a href="${data[i].link}" target="_blank">【${data[i].link}】</a></h2>
+                    <div  class="box">
+                        <h2><a href="${data[i].link}" target="_blank">${data[i].link}</a></h2>
                         <img src="${data[i].image}" width="500px">
                     </div>
                 `;
             }
-            document.body.innerHTML = html;
+            let aaa = document.getElementById("box").innerHTML = html
         }
 
         // Generate the HTML on page load
         window.onload = generateHTML;
     </script>
+
 </body>
 
 </html>
