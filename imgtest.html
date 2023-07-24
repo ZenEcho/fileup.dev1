@@ -8,23 +8,27 @@
     <link rel="shortcut icon" href="https://cdn-us.imgs.moe/2023/07/24/64be512ade53d.ico" type="image/x-icon">
     <meta name="keywords" content="图床比拼,那个图床速度快？,图床选什么,2023年图床" />
     <meta name="description" content="可以让你快速选择心仪图床,对比图床速度的小站" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
     #box {
-
+        margin-top: -5em;
         column-count: 3;
-        /* Adjust the column count as needed */
+        padding: 2em;
+
         column-gap: 20px;
-        /* Adjust the gap between columns as needed */
     }
 
     .box {
+        background-color: white;
         break-inside: avoid;
         box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
         /* Prevent boxes from breaking across columns */
         margin-bottom: 20px;
         padding: 5px;
+        border-radius: 20px;
         overflow: hidden;
         /* Adjust the margin between boxes as needed */
     }
@@ -40,14 +44,8 @@
         margin: 30px 0;
     }
 
-    h1 {
-        font-size: 24px;
-        margin: 10px 0;
-    }
-
-    h2 {
-        font-size: 20px;
-        margin: 20px 0;
+    #box h3 {
+        text-align: center;
     }
 
     p {
@@ -56,22 +54,56 @@
     }
 </style>
 
-<body>
-    <header>
-        <h1><a href="https://hostloc.com/thread-1190659-1-1.html">[图床评比]图床大比拼，是图床就来比一下吧</a></h1>
-        <p>人工筛选所以：禁止国内/国外访问的，上传需要登录的，上传小于5.33MB的都不在内</p>
-        <p>人工可能会有遗漏，不在上述范围的mjj可以联系<a href="https://hostloc.com/thread-1190659-1-1.htm">hostloc</a>或者<a
-                href="https://github.com/ZenEcho/fileup.dev">github</a></p>
-        <p>上传小于5.33或者上传需要登录的,可以将👇原图上传到你的图床并帖内回复或GitHub提交</p>
+<body style="overflow-x: hidden;">
+    <section
+        style="background-color: #2196f3; font-size: 1.5em; color: white; display: flex; flex-direction: column; height: 90vh;">
 
-        <h2>顺序不做排名，测试时请关闭代理，f12打开测试面板，并禁止缓存</h2>
-        <img src="https://i.mji.rip/2023/07/24/d844fc857a6c106e857b118424a6441e.png">
-        <p>原图名称：8K赛博朋克落日旅馆，大小：5.33 MB</p>
-        <p>原图地址：https://images5.alphacoders.com/129/1298529.jpg</p>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid ">
+                <div><img src="https://cdn-us.imgs.moe/2023/07/24/64be512ade53d.ico" height="36px">2023年免费图床</div>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <div class="navbar-nav">
+                        <a class="nav-link" style="color: #dddddd;" href="https://fileup.dev/">盘络上传</a>
+                        <a class="nav-link" style="color: white; font-weight: bold;" href="https://fileup.dev/">图床比拼</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header style="flex: 1; display: flex; align-items: center;">
+            <div class="row" style="display: flex; align-items: center;">
+                <div style="width: 50vw;">
+                    <h1><b>图床大横批，图床就来比一下吧!</b></h1>
+                </div>
+                <div style="width: 50vw;">
+                    <img width="40%" src="https://cdn-us.imgs.moe/2023/07/24/64be113ea5dc7.gif" alt="">
+                </div>
+            </div>
+        </header>
+    </section>
 
-        </h2>
-    </header>
-    <script src="js/imgtest.js"></script>
+
+
+    <section id="box">
+    </section>
+
+    <section style=" background-color: white; box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175)">
+        <footer>
+            <div class="row">
+                <div style="padding: 1em; text-align: center;">
+                    <h1>加入收录</h1>
+                    <h5>满足以下条件：</h5>
+                    <p>1.没有禁止国内/国外访问</p>
+                    <p>2.将原图：https://images5.alphacoders.com/129/1298529.jpg 上传到图床</p>
+                    <p>3.到<a href="https://github.com/ZenEcho/fileup.dev/issues">GitHub提交信息</a></p>
+                </div>
+
+
+            </div>
+
+
+        </footer>
+    </section>
+
     <script>
         // 使用Fisher-Yates算法对数组进行洗牌
         function shuffleArray(array) {
@@ -107,21 +139,20 @@
 
                             // 添加图片元素，并设置onload事件处理函数
                             $box.append(`
-            <div class="box">
-                <h3>图床：<a href="${item.link}" target="_blank">${item.link}</a></h3>
-                <p style=" font-size: 0.7em;">介绍：${item.introduce}</p>
-                <img src="${item.image}">
-                <p style=" font-size: 0.7em;">${item.image}</p>
-            </div>
-        `);
+                                <div class="box">
+                                    <h3><a href="${item.link}" target="_blank">${item.link}</a></h3>
+                                    <p style=" font-size: 0.7em;">${item.introduce}</p>
+                                    <img src="${item.image}">
+                                </div>
+                            `);
 
                             $box.find('img').last().on('load', function () {
                                 // 在class="box"末尾插入加载时间
                                 const endTime = Date.now();
                                 const loadTime = endTime - startTime;
                                 $(this).parent().append(`
-                    <p style=" font-size: 1em; ">加载时间：${loadTime}毫秒</p>
-                    <p style=" font-size: 0.7em; ">(时间计算会受网络,计算机性能,本地时间,浏览器等不确定因素影响)</p>`);
+                                    <p style=" font-size: 1em; ">加载时间：${loadTime}毫秒</p>
+                                    <p style=" font-size: 0.7em; ">(时间计算会受网络,计算机性能,本地时间,浏览器等不确定因素影响)</p>`);
                             });
 
 
@@ -142,9 +173,6 @@
             });
 
     </script>
-
-    <div id="box"></div>
-
 </body>
 
 </html>
