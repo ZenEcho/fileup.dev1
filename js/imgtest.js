@@ -1,7 +1,7 @@
 var data = [
     {
         link: "https://mjj.today/",
-        image: "https://i2.mij.rip/2023/07/24/677f7b899b30449cd21adcde2718f079.jpeg",
+        image: "https://i.mji.rip/2023/07/24/677f7b899b30449cd21adcde2718f079.jpeg",
         introduce: ""
     },
     {
@@ -73,5 +73,10 @@ var data = [
         link: "https://postimg.cc/",
         image: "https://i.postimg.cc/tCJ5pb59/8-K-5-33-MB.jpg",
         introduce: ""
+    },
+    {
+        link: "https://arous.eu.org/",
+        image: "https://arous.cachefly.net/local/2023/07/24/64be3dbe5b503.png",
+        introduce: "NodeSeek专用免费图床"
     }
 ];
