@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mjj图床大比拼</title>
+</head>
+
+<body>
+
+    <script>
+        // Function to shuffle the array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Array to hold the link and image data
+        const data = [
+            {
+                link: "https://mjj.today/",
+                image: "https://i2.mij.rip/2023/07/24/677f7b899b30449cd21adcde2718f079.jpeg"
+            },
+            {
+                link: "https://pnglog.com/",
+                image: "https://cdn-us.imgs.moe/2023/07/24/64bdda1c68a54.jpg"
+            },
+            {
+                link: "https://www.uhsea.com/",
+                image: "https://file.uhsea.com/2307/377fac4913b24a5ac16a49aa597aa59471.jpg"
+            },
+            {
+                link: "https://cap2box.com/",
+                image: "https://s1.imgcap.xyz/2161107b57bc3a77227b33152deffaa7.jpeg"
+            },
+            {
+                link: "https://imgfg.com/",
+                image: "https://imgfg.com/i/IGxAZfAyYz.jpg"
+            },
+            {
+                link: "https://img.xwyue.com/",
+                image: "https://img.xwyue.com/i/2023/07/24/64bddc4b439d6.jpg"
+            },
+            {
+                link: "https://img.duan.ee/",
+                image: "https://img.duan.ee/i/2023/07/24/64bdde3dbde56.jpg"
+            },
+            {
+                link: "https://pic.apic.cc/",
+                image: "https://pic.apic.cc/cloud/2023/07/24/64bdde7c011b9.jpg"
+            },
+            {
+                link: "https://img.ink/",
+                image: "https://pic.ziyuan.wang/2023/07/24/6c888cb738645.jpg"
+            }
+        ];
+
+        // Shuffle the array randomly
+        shuffleArray(data);
+
+        // Function to generate the HTML
+        function generateHTML() {
+            let html = `
+            <h1><a href="https://hostloc.com/thread-1190659-1-1.html">[图床评比]mjj图床大比拼，mjj来比一下吧</a></h1>
+    <h2>顺序不做排名，测试时请关闭代理，f12打开测试面板，并禁止缓存</h2>
+    <img src="https://i.mji.rip/2023/07/24/d844fc857a6c106e857b118424a6441e.png">
+    <p>原图名称：8K赛博朋克落日旅馆，大小：5.33 MB</p>
+    <p>原图地址：https://images5.alphacoders.com/129/1298529.jpg</p>
+    <p>禁止国内/国外访问的，上传需要登录的，上传小于5.33MB的都不在内</p>
+    <p>人工可能会有遗漏，不在上述范围的mjj可以联系https://hostloc.com/thread-1190659-1-1.htm</p>
+
+    <h2></h2>
+    <h2></h2>
+    <h2>
+</h2>
+    
+    
+                <div>
+                    <h2><a href="${data[0].link}" target="_blank">【${data[0].link}】</a></h2>
+                    <img src="${data[0].image}" width="500px">
+                </div>
+            `;
+
+            for (let i = 1; i < data.length; i++) {
+                html += `
+                
+                    <div>
+                        <h2><a href="${data[i].link}" target="_blank">【${data[i].link}】</a></h2>
+                        <img src="${data[i].image}" width="500px">
+                    </div>
+                `;
+            }
+            document.body.innerHTML = html;
+        }
+
+        // Generate the HTML on page load
+        window.onload = generateHTML;
+    </script>
+</body>
+
+</html>
