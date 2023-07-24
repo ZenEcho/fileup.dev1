@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mjj图床大比拼</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
 </head>
 <style>
     #box {
-        
+
         column-count: 3;
         /* Adjust the column count as needed */
         column-gap: 20px;
@@ -20,7 +22,8 @@
         box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
         /* Prevent boxes from breaking across columns */
         margin-bottom: 20px;
-        padding: 10px;
+        padding: 5px;
+        overflow: hidden;
         /* Adjust the margin between boxes as needed */
     }
 
@@ -33,22 +36,21 @@
 
 <body>
     <header>
-        <h1><a href="https://hostloc.com/thread-1190659-1-1.html">[图床评比]mjj图床大比拼，mjj来比一下吧</a></h1>
-        <p>禁止国内/国外访问的，上传需要登录的，上传小于5.33MB的都不在内</p>
-        <p>人工可能会有遗漏，不在上述范围的mjj可以联系</p><a href="https://hostloc.com/thread-1190659-1-1.htm">hostloc</a>或者<a
-            href="https://github.com/ZenEcho/fileup.dev">github</a>
+        <h1><a href="https://hostloc.com/thread-1190659-1-1.html">[图床评比]图床大比拼，是图床就来比一下吧</a></h1>
+        <p>人工筛选所以：禁止国内/国外访问的，上传需要登录的，上传小于5.33MB的都不在内</p>
+        <p>人工可能会有遗漏，不在上述范围的mjj可以联系<a href="https://hostloc.com/thread-1190659-1-1.htm">hostloc</a>或者<a
+                href="https://github.com/ZenEcho/fileup.dev">github</a></p>
+        <p>上传小于5.33或者上传需要登录的,可以将👇原图上传到你的图床并帖内回复或GitHub提交</p>
 
         <h2>顺序不做排名，测试时请关闭代理，f12打开测试面板，并禁止缓存</h2>
         <img src="https://i.mji.rip/2023/07/24/d844fc857a6c106e857b118424a6441e.png">
         <p>原图名称：8K赛博朋克落日旅馆，大小：5.33 MB</p>
         <p>原图地址：https://images5.alphacoders.com/129/1298529.jpg</p>
+
         </h2>
     </header>
-    <div id="box">
-
-    </div>
     <script>
-        // Function to shuffle the array randomly
+        // 使用Fisher-Yates算法对数组进行洗牌
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -56,7 +58,6 @@
             }
         }
 
-        // Array to hold the link and image data
         const data = [
             {
                 link: "https://mjj.today/",
@@ -99,34 +100,53 @@
                 image: "https://i2.100024.xyz/2023/07/24/jzb1p4.webp"
             }
         ];
-
-        // Shuffle the array randomly
+        data.forEach(item => {
+            item.image += `?cache=${Date.now()}`;
+        });
+        // 随机洗牌数组
         shuffleArray(data);
 
-        // Function to generate the HTML
+        // 生成HTML的函数
         function generateHTML() {
-            let html = `
-                <div class="box">
-                    <h2><a href="${data[0].link}" target="_blank">${data[0].link}</a></h2>
-                    <img src="${data[0].image}" width="500px">
-                </div>
-            `;
+            const itemsPerPage = 6;
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentData = data.slice(startIndex, endIndex);
 
-            for (let i = 1; i < data.length; i++) {
-                html += `
-                
-                    <div  class="box">
-                        <h2><a href="${data[i].link}" target="_blank">${data[i].link}</a></h2>
-                        <img src="${data[i].image}" width="500px">
-                    </div>
-                `;
-            }
-            let aaa = document.getElementById("box").innerHTML = html
+            let $box = $('#box'); // 使用jQuery选择器获取box元素
+
+            currentData.forEach(item => {
+                const startTime = Date.now();
+
+                // 添加图片元素，并设置onload事件处理函数
+                $box.append(`
+            <div class="box">
+                <h2 ><a href="${item.link}" target="_blank">图床：${item.link}</a></h2>
+                <p style=" font-size: 0.5em;">${item.image}</p>
+                <img src="${item.image}">
+            </div>
+        `);
+
+                $box.find('img').last().on('load', function () {
+                    // 在class="box"末尾插入加载时间
+                    const endTime = Date.now();
+                    const loadTime = endTime - startTime;
+                    $(this).parent().append(`
+                    <p style=" font-size: 1em; ">加载时间：${loadTime}毫秒</p>
+                    <p style=" font-size: 0.5em; ">(js计算的理论时间,会受网络,计算机性能,本地时间,浏览器等不确定因素影响)</p>`);
+                });
+
+
+
+            });
         }
 
-        // Generate the HTML on page load
-        window.onload = generateHTML;
+        // 页面加载时生成HTML
+        const currentPage = 1;
+        $(document).ready(generateHTML); // 使用jQuery的方式绑定页面加载事件
     </script>
+
+    <div id="box"></div>
 
 </body>
 
