@@ -78,5 +78,10 @@ var data = [
         link: "https://arous.eu.org/",
         image: "https://arous.cachefly.net/local/2023/07/24/64be3dbe5b503.png",
         introduce: "NodeSeek专用免费图床"
+    },
+    {
+        link: "https://vgy.me/",
+        image: "https://i.vgy.me/9Lzmb7.jpg",
+        introduce: ""
     }
 ];
