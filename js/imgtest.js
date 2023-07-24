@@ -58,5 +58,10 @@ var data = [
         link: "https://38.382222.xyz/",
         image: "https://38.382222.xyz/i/2023/07/24/r1li2x.webp",
         introduce: ""
+    },
+    {
+        link: "https://mjjzp.cf/",
+        image: "https://mjjzp.cf/img/2023/07/24/c7af299e7f891.jpg",
+        introduce: ""
     }
 ];
