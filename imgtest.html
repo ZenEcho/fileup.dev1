@@ -9,141 +9,10 @@
     <meta name="keywords" content="图床比拼,那个图床速度快？,图床选什么,2023年图床" />
     <meta name="description" content="可以让你快速选择心仪图床,对比图床速度的小站" />
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/imgtest.css">
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-<style>
-    #box {
-        text-align: center;
-        color: white;
-        margin-top: -5em;
-        column-count: 3;
-        padding: 2em;
-        column-gap: 20px;
-    }
-
-    @media (max-width: 1200px) {
-        #box {
-            column-count: 2;
-        }
-
-       .main-header .header-img {
-            width: 50%;
-        }
-    }
-
-    @media (max-width: 850px) {
-        #box {
-            column-count: 1;
-        }
-
-      .main-header  .header-img {
-            width: 80%;
-        }
-    }
-
-    .box {
-        background-color: white;
-        break-inside: avoid;
-        box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
-        margin-bottom: 20px;
-        padding: 5px;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .box img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .box p {
-        color: #000;
-    }
-
-    .navbar span{
-        color: white;
-    }
-    header {
-        text-align: center;
-    }
-
-    #box h3 {
-        text-align: center;
-    }
-
-    p {
-        font-size: 16px;
-        margin: 0;
-    }
-
-    /* Main section styles */
-    .main-section {
-        background-color: #2196f3;
-        font-size: 1.5em;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        height: 90vh;
-    }
-
-    /* Navbar styles */
-    .navbar {
-        background-color: transparent;
-        color: #dddddd;
-    }
-
-    #navbarNavAltMarkup a:hover {
-        color: #fff;
-        font-weight: bold;
-    }
-
-    .nav-link-dd {
-        color: #f0f0f0;
-    }
-
-    .nav-link-bold {
-        color: #fff;
-    }
-
-    /* Main header styles */
-    .main-header {
-        flex: 1;
-        display: flex;
-        align-items: center;
-    }
-
-    .header-row {
-        display: flex;
-        align-items: center;
-    }
-
-    .header-col {
-        width: 50vw;
-    }
-
-    .main-title {
-        font-size: 2em;
-    }
-
-    .header-img {
-        width: 40%;
-    }
-
-    /* White section styles */
-    .white-section {
-        background-color: white;
-        box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
-    }
-
-    /* Footer styles */
-    footer {
-        padding: 1em;
-        text-align: center;
-    }
-</style>
-
 <body style="overflow-x: hidden;">
     <section class="main-section">
         <nav class="navbar navbar-expand-lg">
@@ -156,8 +25,8 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link nav-link-dd" aria-current="page" href="https://fileup.dev/">盘络上传</a>
-                        <a class="nav-link nav-link-bold" href="https://fileup.dev/imgtest">图床比拼</a>
+                        <a class="nav-link" aria-current="page" href="https://fileup.dev/">盘络上传</a>
+                        <a class="nav-link nav-link-activ" href="https://fileup.dev/imgtest">图床比拼</a>
                     </div>
                 </div>
             </div>
@@ -193,95 +62,7 @@
         </footer>
     </section>
 
-
-    <script>
-        // 使用Fisher-Yates算法对数组进行洗牌
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-        }
-        fetch("https://fileup.dev/imgtestData.json")
-            .then(response => response.text())
-            .then(res => {
-                try {
-                    // 生成HTML的函数
-                    function generateHTML() {
-                        const itemsPerPage = 6;
-                        const startIndex = (currentPage - 1) * itemsPerPage;
-                        const endIndex = startIndex + itemsPerPage;
-                        const currentData = data.slice(startIndex, endIndex);
-
-                        let $box = $('#box'); // 使用jQuery选择器获取box元素
-                        $box.empty()
-                        currentData.forEach(item => {
-                            const startTime = Date.now();
-
-                            // 添加图片元素，并设置onload事件处理函数
-                            $box.append(`
-                                <div class="box">
-                                    <h3><a href="${item.link}" target="_blank">${item.link}</a></h3>
-                                    <p style=" font-size: 0.7em;">${item.introduce}</p>
-                                    <img src="${item.image}">
-                                </div>
-                            `);
-
-                            $box.find('img').last().on('load', function () {
-                                // 在class="box"末尾插入加载时间
-                                const endTime = Date.now();
-                                const loadTime = endTime - startTime;
-                                $(this).parent().append(`
-                                    <p class="text-center">加载时间：${loadTime}毫秒</p>
-                                `);
-                            });
-
-                        });
-                    }
-
-                    // 页面加载时生成HTML
-                    const currentPage = 1;
-
-                    // 倒计时3秒后生成HTML
-                    const jsonObject = JSON.parse(res);
-                    let data = jsonObject.data;
-                    data.forEach(item => {
-                        item.image += `?cache=${Date.now()}`;
-                    });
-                    // 随机洗牌数组
-                    shuffleArray(data);
-
-                    $(document).ready(function () {
-                        let countdown = 3;
-
-                        // 倒计时函数
-                        function startCountdown() {
-                            const countdownInterval = setInterval(() => {
-                                $box.empty().text(`等待：${countdown}秒`);
-                                countdown--;
-
-                                if (countdown < 0) {
-                                    clearInterval(countdownInterval);
-                                    generateHTML();
-                                }
-                            }, 1000);
-                        }
-
-                        let $box = $('#box'); // 使用jQuery选择器获取box元素
-
-                        // 开始倒计时
-                        startCountdown();
-                    });
-
-                } catch (error) {
-                    console.error('Error parsing data:', error);
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-
-    </script>
+<script src="js/imgtest.js"></script>
 </body>
 
 </html>
