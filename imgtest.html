@@ -13,11 +13,12 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-<body style="overflow-x: hidden;">
+
+<body>
     <section class="main-section">
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <div><img src="https://cdn-us.imgs.moe/2023/07/24/64be512ade53d.ico" height="36px"><span>2023年免费图床</span></div>
+            <div class="container">
+                <img src="icons/up.ico" height="36px"><span>2023年免费图床</span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -32,21 +33,22 @@
             </div>
         </nav>
         <header class="main-header">
-            <div class="row header-row">
-                <div class="col-6 header-col">
+            <div class="header-row">
+                <div class="col-6">
                     <h1 class="main-title"><b>图床大横批，图床就来比一下吧!</b></h1>
                 </div>
-                <div class="col-6 header-col">
-                    <img class="header-img" src="https://cdn-us.imgs.moe/2023/07/24/64be113ea5dc7.gif" alt="">
+                <div class="col-6 ">
+                    <img class="header-img" src="icons/64be113ea5dc7.gif" alt="">
                 </div>
             </div>
         </header>
     </section>
-
-    <section id="box">
-    </section>
-    <div class="alert alert-dark text-center" role="alert">
-        加载时间的计算会受网络,计算机性能,本地时间,浏览器等不确定因素影响
+    <div class="container">
+        <section id="box">
+        </section>
+        <div class="alert alert-dark text-center" role="alert">
+            加载时间的计算会受网络,计算机性能,本地时间,浏览器等不确定因素影响
+        </div>
     </div>
     <section class="white-section">
         <footer>
@@ -61,8 +63,29 @@
             </div>
         </footer>
     </section>
-
-<script src="js/imgtest.js"></script>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary text-white vsButton" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">VS</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">自选PK</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="dataBox " style="display: flex;flex-wrap: wrap;"></div>
+                    <div class="select" style="display: flex;flex-wrap: wrap;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="contrast">对比</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/imgtest.js"></script>
 </body>
 
 </html>
