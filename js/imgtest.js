@@ -65,21 +65,26 @@ fetch(fetchURL)
                 const $newImage = $(`
                   <div class="box">
                     <h3><a href="${item.link}" target="_blank">${item.name}</a></h3>
-                    <p style="font-size: 0.7em;">${item.introduce}</p>
+                    <p style="font-size: 0.9em;">${item.introduce}</p>
+                    <div class="image"></div>
                     <div class="loading"></div>
+                    <p class="loadingTime" class="text-center" style="font-size: 0.9em;"></p>
+                    <p class="imageSize" class="text-center" style="font-size: 0.9em;"></p>
                   </div>
                 `);
 
                 // 将当前创建的图片元素附加到 $box
 
                 $box.append($newImage);
+
                 const img = new Image();
                 img.src = item.image + "?cache=$" + Date.now();
                 const startTime = Date.now();
+
                 img.onload = function () {
                     $newImage.find(".loading").remove()
                     // 获取图片宽度和高度
-                    $newImage.append(img);
+                    $newImage.find(".image").append(img);
                     const endTime = Date.now();
                     let loadTime = endTime - startTime;
                     let time;
@@ -89,9 +94,7 @@ fetch(fetchURL)
                     } else {
                         time = "毫秒"
                     }
-                    $(this).parent().append(`
-                        <p class="text-center">加载时间：${loadTime}${time}</p>
-                    `);
+                    $newImage.find(".loadingTime").text(`加载时间：${loadTime}${time}`)
                 };
                 img.onerror = function () {
                     $newImage.find(".loading").remove()
@@ -102,6 +105,20 @@ fetch(fetchURL)
                     `);
                 };
 
+                const xhr = new XMLHttpRequest();
+                xhr.open('HEAD', "https://cors-anywhere.pnglog.com/" + item.image, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        // 获取图片的文件大小
+                        const contentLength = xhr.getResponseHeader('Content-Length');
+                        const fileSizeInBytes = parseInt(contentLength, 10);
+                        const fileSizeInKB = fileSizeInBytes / 1024;
+                        let fileSizeInMB = (fileSizeInKB / 1024 || 0).toFixed(2);
+                        console.log(xhr.getResponseHeader)
+                        $newImage.find(".imageSize").text(`图片大小：${fileSizeInMB}MB`)
+                    }
+                };
+                xhr.send();
             });
 
         }
