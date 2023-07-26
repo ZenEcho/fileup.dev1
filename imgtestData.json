@@ -167,6 +167,14 @@
             "introduce": "无铭图床",
             "CDN": 0,
             "region": "CN"
+        },
+        {
+            "name": "绿色图床",
+            "link": "https://lvse.cf/",
+            "image": "https://img.erpweb.eu.org/imgs/2023/07/570c1b854cb6f5ac.jpg",
+            "introduce": "免登录-打开就可上传图片-大姐姐,采用CF CDN全球加速",
+            "CDN": 1,
+            "region": 0
         }
     ]
 }
