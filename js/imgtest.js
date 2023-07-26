@@ -61,29 +61,47 @@ fetch(fetchURL)
                 currentData = Data
             }
             currentData.forEach(item => {
-                item.image += `?cache=${Date.now()}`;
-            });
-            currentData.forEach(item => {
-                const startTime = Date.now();
                 // 创建并附加图片元素
                 const $newImage = $(`
                   <div class="box">
                     <h3><a href="${item.link}" target="_blank">${item.name}</a></h3>
                     <p style="font-size: 0.7em;">${item.introduce}</p>
-                    <img src="${item.image}" loading="lazy">
+                    <div class="loading"></div>
                   </div>
                 `);
+
                 // 将当前创建的图片元素附加到 $box
+
                 $box.append($newImage);
-                // 将 load 事件绑定到当前创建的图片元素
-                $newImage.find('img').on('load', function () {
-                    // 在 class="box" 末尾插入加载时间
+                const img = new Image();
+                img.src = item.image + "?cache=$" + Date.now();
+                const startTime = Date.now();
+                img.onload = function () {
+                    $newImage.find(".loading").remove()
+                    // 获取图片宽度和高度
+                    $newImage.append(img);
                     const endTime = Date.now();
-                    const loadTime = endTime - startTime;
+                    let loadTime = endTime - startTime;
+                    let time;
+                    if (loadTime > 1000) {
+                        loadTime = loadTime / 1000
+                        time = "秒"
+                    } else {
+                        time = "毫秒"
+                    }
                     $(this).parent().append(`
-                    <p class="text-center">加载时间：${loadTime}毫秒</p>
-                  `);
-                });
+                        <p class="text-center">加载时间：${loadTime}${time}</p>
+                    `);
+                };
+                img.onerror = function () {
+                    $newImage.find(".loading").remove()
+                    $newImage.append(`
+                    <div class="alert alert-danger" role="alert">
+                        图片加载失败
+                    </div>
+                    `);
+                };
+
             });
 
         }
