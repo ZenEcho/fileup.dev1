@@ -69,7 +69,7 @@ fetch(fetchURL)
                     <div class="image"></div>
                     <div class="loading"></div>
                     <p class="text-center row" style="font-size: 0.9em;">
-                        <span class="loadingTime col" style="color: #dc3545;">加载时间:1秒</span><span class="imageSize col" style="color: #198754;">图片大小:0.00MB</span>
+                        <span class="loadingTime col" style="color: #dc3545;">加载时间:</span><span class="imageSize col" style="color: #198754;">图片大小:0.00MB</span>
                     </p>
                   </div>
                 `);
@@ -91,7 +91,7 @@ fetch(fetchURL)
                 const img = new Image();
                 img.src = item.image + "?cache=$" + Date.now();
                 const startTime = Date.now();
-
+                img.classList.add("rounded");
                 img.onload = function () {
                     $newImage.find(".loading").remove()
                     // 获取图片宽度和高度

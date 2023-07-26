@@ -71,6 +71,7 @@
 }
 
 .box {
+    border: 1px solid #dddddd;
     background-color: white;
     break-inside: avoid;
     box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
@@ -180,7 +181,8 @@ p {
 
 /* White section styles */
 .white-section {
-    background-color: white;
+    color: white;
+    background-color: #20c997;
     box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
 }
 
