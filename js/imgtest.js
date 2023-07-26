@@ -114,7 +114,6 @@ fetch(fetchURL)
                         const fileSizeInBytes = parseInt(contentLength, 10);
                         const fileSizeInKB = fileSizeInBytes / 1024;
                         let fileSizeInMB = (fileSizeInKB / 1024 || 0).toFixed(2);
-                        console.log(xhr.getResponseHeader)
                         $newImage.find(".imageSize").text(`图片大小：${fileSizeInMB}MB`)
                     }
                 };
