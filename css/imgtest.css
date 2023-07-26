@@ -129,12 +129,11 @@ p {
 
 .vsButton:hover {
     background: rgb(0 0 0 / 50%);
-
 }
 
 /* Main section styles */
 .main-section {
-    background-color: #2196f3;
+    background-image: linear-gradient(180deg, #0d6efd, #0dcaf0);
     font-size: 1.5em;
     color: white;
     display: flex;
@@ -191,8 +190,12 @@ p {
 /* White section styles */
 .white-section {
     color: white;
-    background-color: #20c997;
+    background-image: linear-gradient(90deg, #0dcaf0, #20c997);
     box-shadow: 0 1rem 3rem rgba(33, 37, 41, .175);
+}
+
+.white-section a {
+    text-decoration: none;
 }
 
 /* Footer styles */
