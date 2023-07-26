@@ -118,9 +118,17 @@ p {
 }
 
 .vsButton {
+    background: rgb(0 0 0 / 20%);
+    width: 4em;
+    height: 4em;
+    border-radius:50% ;
     position: fixed;
     bottom: 0.1em;
     left: 0.1em;
+}
+.vsButton:hover {
+    background: rgb(0 0 0 / 50%);
+
 }
 
 /* Main section styles */
@@ -226,7 +234,7 @@ footer {
     }
 }
 
-.ISCDN {
+.IsIcons {
     position: absolute;
     right: 1em;
     top: 6px;

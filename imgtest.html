@@ -51,22 +51,22 @@
     <section class="white-section">
         <footer>
             <div class="row">
-                <div class="col-12 text-center">
-                    <h1>加入收录</h1>
-                    <h5>满足以下条件：</h5>
-                    <p>1.没有禁止国内/国外访问</p>
-                    <p>2.将测试图：https://images5.alphacoders.com/129/1298529.jpg 上传到图床</p>
-                    <p>3.到<a href="https://github.com/ZenEcho/fileup.dev/issues">GitHub提交信息</a></p>
-                    <p>4.信息格式：图床名称,图床链接,👆测试图,图床描述</p>
-                </div>
+                <p><span>Copyright 2023 欢迎访问图床大比拼</span></p>
+                <p><a href="https://github.com/ZenEcho/fileup.dev">GitHub</a>,<a
+                        href="https://fileup.dev/imgtest">2023免费图床</a>,<a
+                        href="https://fileup.dev/imgtest">国内外免费图床</a>,<a
+                        href="https://fileup.dev/imgtest">最新2023免费图床</a>
+                </p>
+
             </div>
         </footer>
     </section>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary text-white vsButton" data-bs-toggle="modal"
-        data-bs-target="#exampleModal">VS</button>
+    <button type="button" class="btn text-white vsButton" data-bs-toggle="modal" data-bs-target="#VSModal">VS</button>
+    <button type="button" class="btn text-white vsButton" data-bs-toggle="modal" data-bs-target="#SLModal"
+        style="bottom: 4.5em;">收录</button>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="VSModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
@@ -80,6 +80,29 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary" id="contrast">对比</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="SLModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">收录说明</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 text-center">
+                        <h1>加入收录</h1>
+                        <h5>满足以下条件：</h5>
+                        <p>1.没有禁止国内/国外访问</p>
+                        <p>2.将测试图：https://images5.alphacoders.com/129/1298529.jpg 上传到图床</p>
+                        <p>3.到<a href="https://github.com/ZenEcho/fileup.dev/issues">GitHub提交信息</a></p>
+                        <p>4.信息格式：图床名称,图床链接,👆测试图,图床描述</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">知道了</button>
                 </div>
             </div>
         </div>
