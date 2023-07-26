@@ -74,6 +74,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <div class="image-hosting-buttons">
+                        <button type="button" class="all-image-hosting" data-type="all">全部</button>
+                        <button type="button" class="foreign-image-hosting" data-type="foreign">国外图床</button>
+                        <button type="button" class="domestic-image-hosting" data-type="domestic">国内图床</button>
+                        <button type="button" class="CDN-image-hosting" data-type="CDN">CDN</button>
+                        <button type="button" class="direct-image-hosting" data-type="direct">直连</button>
+                    </div>
                     <div class="dataBox " style="display: flex;flex-wrap: wrap;"></div>
                     <div class="select" style="display: flex;flex-wrap: wrap;"></div>
                 </div>
@@ -97,11 +104,13 @@
                         <h5>满足以下条件：</h5>
                         <p>1.没有禁止国内/国外访问</p>
                         <p>2.将测试图：https://images5.alphacoders.com/129/1298529.jpg 上传到图床</p>
-                        <p>3.到<a href="https://github.com/ZenEcho/fileup.dev/issues">GitHub提交信息</a></p>
-                        <p>4.信息格式：图床名称,图床链接,👆测试图,图床描述</p>
+                        <p>3.到<a href="https://github.com/ZenEcho/fileup.dev/issues" target="_blank">GitHub提交信息</a></p>
+                        <p>4.信息格式：图床名称,图床链接,测试图url,图床描述</p>
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <a href="https://github.com/ZenEcho/fileup.dev/issues" style="color: white;text-decoration: none;"
+                        type="button" class="btn btn-primary" target="_blank">去申请</a>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">知道了</button>
                 </div>
             </div>

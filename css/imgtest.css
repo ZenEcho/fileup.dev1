@@ -121,11 +121,12 @@ p {
     background: rgb(0 0 0 / 20%);
     width: 4em;
     height: 4em;
-    border-radius:50% ;
+    border-radius: 50%;
     position: fixed;
     bottom: 0.1em;
     left: 0.1em;
 }
+
 .vsButton:hover {
     background: rgb(0 0 0 / 50%);
 
@@ -238,4 +239,28 @@ footer {
     position: absolute;
     right: 1em;
     top: 6px;
+}
+
+.image-hosting-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.image-hosting-buttons button {
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px #eee solid;
+    background: #dee2e6;
+    margin: 0;
+    width: 7em;
+    height: 2em;
+}
+
+.image-hosting-buttons button:last-child {
+    border: none;
+}
+
+.image-hosting-buttons button:hover {
+    background: #eee;
 }
