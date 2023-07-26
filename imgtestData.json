@@ -4,127 +4,148 @@
             "name": "MJJ.TODAY",
             "link": "https://mjj.today/",
             "image": "https://i.mji.rip/2023/07/24/677f7b899b30449cd21adcde2718f079.jpeg",
-            "introduce": "更适合 mjj 体质的斯巴达图床"
+            "introduce": "更适合 mjj 体质的斯巴达图床",
+            "CDN": 1
         },
         {
             "name": "盘络图床",
             "link": "https://pnglog.com/",
             "image": "https://cdn-us.imgs.moe/2023/07/24/64bdda1c68a54.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 0
         },
         {
             "name": "屋舍-您的文件柜",
             "link": "https://www.uhsea.com/",
             "image": "https://file.uhsea.com/2307/377fac4913b24a5ac16a49aa597aa59471.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "Cap2Box",
             "link": "https://cap2box.com/",
             "image": "https://s1.imgcap.xyz/2161107b57bc3a77227b33152deffaa7.jpeg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "富贵图床",
             "link": "https://imgfg.com/",
             "image": "https://imgfg.com/i/IGxAZfAyYz.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "星跃图床",
             "link": "https://img.xwyue.com/",
             "image": "https://img.xwyue.com/i/2023/07/24/64bddc4b439d6.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "阿段图床",
             "link": "https://img.duan.ee/",
             "image": "https://img.duan.ee/i/2023/07/24/64bdde3dbde56.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "Apic",
             "link": "https://pic.apic.cc/",
             "image": "https://pic.apic.cc/cloud/2023/07/24/64bdde7c011b9.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 0
         },
         {
             "name": "水墨图床",
             "link": "https://img.ink/",
             "image": "https://pic.ziyuan.wang/2023/07/24/6c888cb738645.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 0
         },
         {
             "name": "简单图床",
             "link": "https://png.cm/",
             "image": "https://i2.100024.xyz/2023/07/24/jzb1p4.webp",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 0
         },
         {
             "name": "IMG Table",
             "link": "https://www.imgtbl.com/",
             "image": "https://www.imgtbl.com/i/2023/07/24/64be0e945d719.jpg",
-            "introduce": "IMGTable 云端相册"
+            "introduce": "IMGTable 云端相册",
+            "CDN": 1
         },
         {
             "name": "382222",
             "link": "https://38.382222.xyz/",
             "image": "https://38.382222.xyz/i/2023/07/24/r1li2x.webp",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 0
         },
         {
             "name": "白嫖图床",
             "link": "https://mjjzp.cf/",
             "image": "https://mjjzp.cf/img/2023/07/24/c7af299e7f891.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "路过图床",
             "link": "https://imgse.com/",
             "image": "https://s1.ax1x.com/2023/07/24/pCOEYSH.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "postimages",
             "link": "https://postimg.cc/",
             "image": "https://i.postimg.cc/tCJ5pb59/8-K-5-33-MB.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "ArousPic",
             "link": "https://arous.eu.org/",
             "image": "https://arous.cachefly.net/local/2023/07/24/64be3dbe5b503.png",
-            "introduce": "NodeSeek专用免费图床"
+            "introduce": "NodeSeek专用免费图床",
+            "CDN": 0
         },
         {
             "name": "vgy.me",
             "link": "https://vgy.me/",
             "image": "https://i.vgy.me/9Lzmb7.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "IMGDD",
             "link": "http://imgdd.com/",
             "image": "https://img.imgdd.com/f210f3.cyber.jpeg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "简约图床",
             "link": "https://pic.sl.al/",
             "image": "https://pic.sl.al/gdrive/pic/2023-07-24/64bddabc123b3.jpg",
-            "introduce": ""
+            "introduce": "",
+            "CDN": 1
         },
         {
             "name": "萌虎图床",
             "link": "https://mhimg.cn/",
             "image": "https://aliyunxgtc.img.mhimg.cn/mhimg/2023/1/07/25/64bfd0ddeb724.jpg",
-            "introduce": "萌虎图床，云星博客旗下图床"
+            "introduce": "萌虎图床，云星博客旗下图床",
+            "CDN": 0
         },
         {
             "name": "无铭图床",
             "link": "https://wmimg.com/",
             "image": "https://wmimg.com/i/2/2023/07/64bfd142ab07d.jpg",
-            "introduce": "无铭图床"
+            "introduce": "无铭图床",
+            "CDN": 0
         }
     ]
 }

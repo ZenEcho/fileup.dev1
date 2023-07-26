@@ -78,6 +78,7 @@
     padding: 5px;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
 
 .box img {
@@ -88,6 +89,10 @@
 
 .box p {
     color: #000;
+}
+
+.box a {
+    text-decoration: none;
 }
 
 .navbar span {
@@ -217,4 +222,10 @@ footer {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.ISCDN {
+    position: absolute;
+    right: 1em;
+    top: 6px;
 }
