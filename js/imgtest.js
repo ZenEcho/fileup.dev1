@@ -10,6 +10,8 @@ function shuffleArray(array) {
 function filterDataByIndex(data, indexList) {
     return indexList.map(index => data[index]);
 }
+
+// 自定义DATA
 const urlParams = new URLSearchParams(window.location.search);
 const dataParamValue = urlParams.get('data');
 let fetchURL
@@ -59,11 +61,14 @@ fetch(fetchURL)
                 currentData = Data
             }
             currentData.forEach(item => {
+                item.image += `?cache=${Date.now()}`;
+            });
+            currentData.forEach(item => {
                 const startTime = Date.now();
                 // 创建并附加图片元素
                 const $newImage = $(`
                   <div class="box">
-                    <h3><a href="${item.link}" target="_blank">${item.link}</a></h3>
+                    <h3><a href="${item.link}" target="_blank">${item.name}</a></h3>
                     <p style="font-size: 0.7em;">${item.introduce}</p>
                     <img src="${item.image}" loading="lazy">
                   </div>
@@ -85,9 +90,6 @@ fetch(fetchURL)
 
         // 随机洗牌数组
         shuffleArray(data);
-        data.forEach(item => {
-            item.image += `?cache=${Date.now()}`;
-        });
 
         function startCountdown() {
             const countdownInterval = setInterval(() => {
@@ -101,17 +103,17 @@ fetch(fetchURL)
                     let select = []
                     data.forEach((item, index) => {
                         let html = $(`<div style="margin: 10px; padding: 10px;" class="shadow">
-                            <span >"${item.link}"</span>
+                            <span >"${item.name}"</span>
                         </div>`)
                         dataBox.append(html);
 
                         html.click(function () {
                             $(this).toggleClass("Boxactiv");
                             if ($(this).hasClass("Boxactiv")) {
-                                $(".select").append(`<span index="${index}" style=" border: 1px solid; margin:10px; padding: 5px; ">"${item.link}"</span>`);
+                                $(".select").append(`<span index="${index}" style=" border: 1px solid; margin:10px; padding: 5px; ">"${item.name}"</span>`);
                                 select.push(index)
                             } else {
-                                $(".select").find(`span:contains("${item.link}")`).remove();
+                                $(".select").find(`span:contains("${item.name}")`).remove();
                                 const removeIndex = select.indexOf(index);
                                 if (removeIndex !== -1) {
                                     // 使用 splice 方法删除该索引
@@ -122,19 +124,17 @@ fetch(fetchURL)
                     })
                     $("#contrast").click(() => {
                         const filteredData = filterDataByIndex(data, select);
+                        $("#box").removeClass("count1 count2 count3");
                         if (filteredData.length != 0) {
-                            generateHTML(filteredData)
+                            generateHTML(filteredData);
                         }
-                        if (filteredData.length == 1) {
-                            $("#box").addClass("count1");
-                        }
-                        if (filteredData.length == 2) {
-                            $("#box").addClass("count2");
-                        }
-                        if (filteredData.length > 2) {
+                        // 根据 filteredData.length 来设置 class 的值
+                        if (filteredData.length >= 1 && filteredData.length <= 3) {
+                            $("#box").addClass(`count${filteredData.length}`);
+                        } else if (filteredData.length > 3) {
                             $("#box").addClass("count3");
                         }
-                    })
+                    });
                 }
             }, 1000);
         }

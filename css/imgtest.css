@@ -18,14 +18,25 @@
     column-count: 3;
 }
 
+.main-header .header-img {
+    width: 20em;
+}
 
+@media (max-height: 800px) {
+    .main-header .header-img {
+        width: 15em;
+    }
+}
+
+@media (max-height: 600px) {
+    .main-header .header-img {
+        display: none;
+    }
+}
 
 @media (max-width: 1300px) {
     .header-row {
         width: 100%;
-    }
-    .main-header .header-img {
-        width: 40%;
     }
 }
 
