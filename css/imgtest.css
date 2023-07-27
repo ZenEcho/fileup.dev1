@@ -32,6 +32,9 @@
     .main-header .header-img {
         display: none;
     }
+    .main-title{
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 1300px) {
@@ -54,6 +57,7 @@
     .main-header .header-img {
         width: 15em;
     }
+
     #box {
         column-count: 1;
     }
@@ -67,9 +71,18 @@
     }
 }
 
+@media (max-width: 750px) {
+    .main-title{
+        font-size: 1.7em !important;
+    }
+
+}
 @media (max-width: 600px) {
     .main-header .header-img {
         display: none;
+    }
+    .main-title{
+        font-size: 1.5em !important;
     }
     .dataDiv {
         display: block !important;
@@ -96,6 +109,9 @@
 }
 
 @media (max-width: 550px) {
+    .main-title{
+        font-size: 1.2em !important;
+    }
     .image-hosting-buttons {
         display: block !important;
     }
