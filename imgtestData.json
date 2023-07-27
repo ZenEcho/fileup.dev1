@@ -188,9 +188,17 @@
             "name": "过客图床",
             "link": "https://imgxu.cn/",
             "image": "https://img.cloudcoss.com/2023/07/27/64c26f0d39408.jpg",
-            "introduce": " 过客图床,可以成为你的常用的图床",
+            "introduce": "过客图床,可以成为你的常用的图床",
             "CDN": 1,
             "region": 0
+        },
+        {
+            "name": "helloimg图床",
+            "link": "https://www.helloimg.com/",
+            "image": "https://www.helloimg.com/images/2023/07/27/oAjWo0.jpg",
+            "introduce": "",
+            "CDN": 0,
+            "region": "CN"
         }
     ]
 }
