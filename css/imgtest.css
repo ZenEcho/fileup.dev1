@@ -68,6 +68,32 @@
     .main-header .header-img {
         display: none;
     }
+
+    .image-hosting-buttons {
+        display: block !important;
+    }
+
+    .image-hosting-buttons button {
+        border: none !important;
+        margin: 1px 0 !important;
+        width: 100% !important;
+    }
+
+    .dataDiv {
+        display: block !important;
+        column-gap: 4px;
+        column-count: 2;
+    }
+
+    .dataContent {
+        text-align: center;
+        padding: 10px;
+        margin: 0px !important;
+    }
+    .IsIcons svg{
+        width: 1em;
+        height: 1em;
+    }
 }
 
 .box {
@@ -266,4 +292,14 @@ footer {
 
 .image-hosting-buttons button:hover {
     background: #eee;
+}
+
+.dataDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dataContent {
+    margin: 10px;
+    padding: 10px;
 }

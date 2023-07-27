@@ -163,7 +163,7 @@ fetch(fetchURL)
                     function PKgenerateHTML(Data) {
                         dataBox.empty(); // 清空原有的内容
                         Data.forEach((item, index) => {
-                            let html = $(`<div style="margin: 10px; padding: 10px;" class="shadow">
+                            let html = $(`<div class="shadow dataContent">
                                 <span >"${item.name}"</span>
                             </div>`);
                             dataBox.append(html);
