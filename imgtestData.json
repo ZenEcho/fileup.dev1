@@ -175,6 +175,23 @@
             "introduce": "免登录-打开就可上传图片-大姐姐,采用CF CDN全球加速",
             "CDN": 1,
             "region": 0
+        },
+        {
+            "name": "FREEIMG图床(备案中)",
+            "link": "https://www.freeimg.cn/",
+            "image": "https://www.it7v.com/zb_users/upload/2023/07/20230727210543169046314353874.jpg",
+            "introduce": "域名备案中",
+            "CDN": 0,
+            "region": "CN"
+        },
+        {
+            "name": "过客图床",
+            "link": "https://imgxu.cn/",
+            "image": "https://img.cloudcoss.com/2023/07/27/64c26f0d39408.jpg",
+            "introduce": " 过客图床,可以成为你的常用的图床",
+            "CDN": 1,
+            "region": 0
         }
+        
     ]
 }
