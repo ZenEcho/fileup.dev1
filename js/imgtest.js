@@ -171,10 +171,10 @@ fetch(fetchURL)
                             html.click(function () {
                                 $(this).toggleClass("Boxactiv");
                                 if ($(this).hasClass("Boxactiv")) {
-                                    $(".select").append(`<span index="${index}" style=" border: 1px solid; margin:10px; padding: 5px; ">"${item.name}"</span>`);
+                                    $(".select").append(`<div></span><span index="${index}">"${item.name}"</span></div>`);
                                     select.push(index);
                                 } else {
-                                    $(".select").find(`span:contains("${item.name}")`).remove();
+                                    $(".select").find(`span[index="${index}"]`).parent().remove();
                                     const removeIndex = select.indexOf(index);
                                     if (removeIndex !== -1) {
                                         // 使用 splice 方法删除该索引
