@@ -82,6 +82,9 @@
         display: none;
     }
     .main-title{
+        width: 100% !important;
+    }
+    .main-title{
         font-size: 1.5em !important;
     }
     .dataDiv {
