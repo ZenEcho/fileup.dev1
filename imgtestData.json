@@ -165,7 +165,7 @@
             "link": "https://wmimg.com/",
             "image": "https://wmimg.com/i/2/2023/07/64bfd142ab07d.jpg",
             "introduce": "无铭图床",
-            "CDN": 0,
+            "CDN": 1,
             "region": "CN"
         },
         {
@@ -192,6 +192,5 @@
             "CDN": 1,
             "region": 0
         }
-        
     ]
 }
