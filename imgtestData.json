@@ -199,6 +199,14 @@
             "introduce": "",
             "CDN": 1,
             "region": "CN"
+        },
+        {
+            "name": "片图",
+            "link": "https://piantu.cn/",
+            "image": "https://i.pigpig.in/1/64c505f4dec73.jpg",
+            "introduce": "",
+            "CDN": 1,
+            "region": 0
         }
     ]
 }
