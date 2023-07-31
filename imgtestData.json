@@ -207,6 +207,30 @@
             "introduce": "",
             "CDN": 1,
             "region": 0
+        },
+        {
+            "name": "MVirtua IMG",
+            "link": "https://www.mvimg.co/",
+            "image": "https://asia.one.mvimg.co/afdf5da6919b765b/64c726a396569.jpg",
+            "introduce": "MVirtua免费图床，提供亚太网络优化和欧美区域稳定存储，稳定高速额公益图床",
+            "CDN": 1,
+            "region": 0
+        },
+        {
+            "name": "愛上傳",
+            "link": "https://imgur.la",
+            "image": "https://img.chkaja.com/4b19de1116b8613a.jpg",
+            "introduce": "愛上傳Image Upload Hosting提供高速穩定圖片上傳儲存服務，無需登入即可免費圖片上傳，原圖保存未經壓縮、不添加浮水印，多張圖檔一次上傳、螢幕截圖、剪貼簿複製貼上、URL遠程、拖曳快速上傳、進度提示訊息",
+            "CDN": 1,
+            "region": 0
+        },
+        {
+            "name": "imgur图床",
+            "link": "https://img.chkaja.com/",
+            "image": "https://imgur.la/images/2023/07/31/1298529.jpg",
+            "introduce": "",
+            "CDN": 1,
+            "region": 0
         }
     ]
 }
