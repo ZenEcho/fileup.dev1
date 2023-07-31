@@ -239,6 +239,14 @@
             "introduce": "",
             "CDN": 0,
             "region": "CN"
+        },
+        {
+            "name": "零玖图床",
+            "link": "https://pan.vv1234.cn/",
+            "image": "https://wx1.vv1234.cn/2023/07/31/10864c7ade584e38.jpg",
+            "introduce": "零玖图床 pan.vv1234.cn",
+            "CDN": 0,
+            "region": "CN"
         }
     ]
 }
