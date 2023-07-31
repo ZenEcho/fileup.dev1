@@ -247,6 +247,14 @@
             "introduce": "零玖图床 pan.vv1234.cn",
             "CDN": 0,
             "region": "CN"
+        },
+        {
+            "name": "浩方图床",
+            "link": "https://img.haofon.com",
+            "image": "https://img.haofon.com/7KApnm.jpg",
+            "introduce": "您的云上相册",
+            "CDN": 1,
+            "region": "CN"
         }
     ]
 }
