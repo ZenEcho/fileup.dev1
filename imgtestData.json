@@ -17,10 +17,10 @@
             "region": 0
         },
         {
-            "name": "屋舍-您的文件柜",
+            "name": "屋舍",
             "link": "https://www.uhsea.com/",
-            "image": "https://file.uhsea.com/2307/377fac4913b24a5ac16a49aa597aa59471.jpg",
-            "introduce": "",
+            "image": "https://file.uhsea.com/2307/1d9c3c0d573938095d1a491cddd12a75MJ.png",
+            "introduce": "屋舍，您最可靠的永久高速网络文件存储柜。",
             "CDN": 1,
             "region": 0
         },
@@ -67,8 +67,8 @@
         {
             "name": "水墨图床",
             "link": "https://img.ink/",
-            "image": "https://pic.ziyuan.wang/2023/07/24/6c888cb738645.jpg",
-            "introduce": "",
+            "image": "https://pic.ziyuan.wang/2023/07/31/dce48aa2ec965.png",
+            "introduce": "免费外链图床",
             "CDN": 0,
             "region": "CN"
         },
