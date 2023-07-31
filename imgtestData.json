@@ -231,6 +231,14 @@
             "introduce": "",
             "CDN": 1,
             "region": 0
+        },
+        {
+            "name": "听闻图床",
+            "link": "https://www.xn--9qr844m.cn:8090/",
+            "image": "https://www.xn--9qr844m.cn:5244/d/本地/阿里云盘资料备份共享/图片/图床/2023/07/31/64c765b84b272.jpg",
+            "introduce": "",
+            "CDN": 0,
+            "region": "CN"
         }
     ]
 }
