@@ -19,7 +19,7 @@
         {
             "name": "屋舍",
             "link": "https://www.uhsea.com/",
-            "image": "https://file.uhsea.com/2307/1d9c3c0d573938095d1a491cddd12a75MJ.png",
+            "image": "https://file.uhsea.com/2307/377fac4913b24a5ac16a49aa597aa59471.png",
             "introduce": "屋舍，您最可靠的永久高速网络文件存储柜。",
             "CDN": 1,
             "region": 0
@@ -67,7 +67,7 @@
         {
             "name": "水墨图床",
             "link": "https://img.ink/",
-            "image": "https://pic.ziyuan.wang/2023/07/31/dce48aa2ec965.png",
+            "image": "https://pic.ziyuan.wang/2023/07/24/6c888cb738645.jpg",
             "introduce": "免费外链图床",
             "CDN": 0,
             "region": "CN"
@@ -255,6 +255,14 @@
             "introduce": "您的云上相册",
             "CDN": 1,
             "region": "CN"
+        },
+        {
+            "name": "有图床",
+            "link": "https://www.yopngs.com/",
+            "image": "https://cdn.yopngs.com/2023/08/02/0985aaf7-9ac1-42cf-b3e4-6a815239528e.jpg",
+            "introduce": "免费图床, 纯粹图床！",
+            "CDN": 1,
+            "region": 0
         }
     ]
 }
