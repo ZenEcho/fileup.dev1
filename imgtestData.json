@@ -263,6 +263,30 @@
             "introduce": "免费图床, 纯粹图床！",
             "CDN": 1,
             "region": 0
+        },
+        {
+            "name": "无花果外链网盘",
+            "link": "https://pan.whgpc.com/",
+            "image": "https://pan.whgpc.com/view.php/f65d6858570c1b854cb6f5accda27dcd.jpg",
+            "introduce": "无花果外链网盘,免费外链,免费图床,音视频外链图床",
+            "CDN": 1,
+            "region": 0
+        },
+        {
+            "name": "网站排行榜图床",
+            "link": "https://tc.dhmip.cn/",
+            "image": "https://tc.dhmip.cn/imgs/2023/08/04/570c1b854cb6f5ac.jpg",
+            "introduce": "",
+            "CDN": 1,
+            "region": "CN"
+        },
+        {
+            "name": "载涂图床",
+            "link": "https://mcecy.com/",
+            "image": "https://cn.mcecy.com/image/20230804/566c2b23bcb8ea79cf3173e13449b15b.jpg",
+            "introduce": "",
+            "CDN": 1,
+            "region": 0
         }
     ]
 }
